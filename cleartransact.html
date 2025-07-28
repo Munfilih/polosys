@@ -6,7 +6,10 @@
 </head>
 <body>
   <pre id="text">
-SET @BranchID=1
+declare
+ @BranchID int
+ set @BranchID=1
+
 delete from AccTransactionDetails WHERE BranchID=@BranchID
 delete from AccTransactionMaster WHERE BranchID=@BranchID
 delete from BillwiseDetails WHERE BranchID=@BranchID

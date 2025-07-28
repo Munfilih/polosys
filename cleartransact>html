@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Copy Text Example</title>
+</head>
+<body>
+  <pre id="text">
+This is a plain text website.
+
+You can copy all of this content freely.
+No CSS or fancy styles.
+Just click the button below to copy this text.
+  </pre>
+
+  <button onclick="copyText()">Copy Text</button>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("text").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Text copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>

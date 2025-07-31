@@ -2,109 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Polosys Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick Links to Polosys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #0f0f0f;
+      --card-color: #1a1a1a;
+      --accent-color: #00bcd4;
+      --text-color: #ffffff;
+      --hover-color: #333333;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-    }
-
-    .card {
-      background-color: #fff;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 40px 20px;
     }
 
     h1 {
-      color: #333;
+      text-align: center;
       font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 25px;
-      position: relative;
+      margin-bottom: 40px;
     }
 
-    h1::after {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 4px;
-      background-color: #0077cc;
-      margin: 10px auto 0;
-      border-radius: 2px;
+    .links-section {
+      max-width: 800px;
+      margin: 0 auto 60px auto;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 12px;
     }
 
-    li {
-      margin: 20px 0;
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
-    a {
+    .link-card {
+      background: var(--card-color);
+      padding: 18px 24px;
+      border-radius: 10px;
       text-decoration: none;
-      color: #fff;
-      background-color: #0077cc;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background-color 0.3s, transform 0.2s;
-      display: inline-block;
-      box-shadow: 0 4px 10px rgba(0, 119, 204, 0.2);
+      color: var(--text-color);
+      transition: background 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    a:hover {
-      background-color: #005fa3;
-      transform: translateY(-2px);
+    .link-card:hover {
+      background: var(--hover-color);
+    }
+
+    .link-card span {
+      font-size: 1rem;
+    }
+
+    .link-card .arrow {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      margin-top: 40px;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
-      .card {
-        padding: 20px;
-      }
-
       h1 {
         font-size: 2rem;
       }
 
-      a {
-        width: 100%;
-        box-sizing: border-box;
+      .link-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Polosys Links</h1>
-    <ul>
-      <li><a href="https://www.polosys.com/PolosysPages/UpdateLinks.aspx" target="_blank">Polosys Update Links</a></li>
-      <li><a href="https://drive.google.com/file/d/1Uh18JEKtuuhgLzRH9McH-Rlxui5mx6De/view?usp=drive_link" target="_blank">SQL 2019</a></li>
-      <li><a href="https://drive.google.com/file/d/1yjwacwJrjoF_qL_pEn0oSgGdyrBIp_LN/view?usp=drivesdk" target="_blank">SQL 2022</a></li>
-      <li><a href="https://munfilih.github.io/polosys/cleartransact.html" target="_blank">Clear all transaction: Executable Query</a></li>
-      <li><a href="https://youtube.com/@cyberlayer?si=w9DjYyLJsciMt35c=" target="_blank">Cyber Layer Youtube Channel</a></li>
-      <li><a href="https://drive.google.com/file/d/10pMe5CUP3aVSwtBeTKcLwK-A5r4zIV9Z/view?usp=sharing" target="_blank">Polosys ERP 9.0</a></li>
-      <li><a href="https://munfilih.github.io/polosys/important.html" target="_blank">Important</a></li>
-      <li><a href="https://munfilih.github.io/polosys/test.html" target="_blank">test</a></li>
-      <li><a href="https://github.com/Munfilih/polosys/blob/main/AnyDesk-Reset.cmd" target="_blank">Anydesk</a></li>
-    </ul>
+
+  <h1>Polosys Technologies</h1>
+
+  <div class="links-section">
+    <div class="section-title">Quick Links</div>
+    <div class="link-list">
+      <a href="https://www.polosys.com/PolosysPages/UpdateLinks.aspx" class="link-card" target="_blank">
+        <span>Polosys Update Links</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://drive.google.com/file/d/10pMe5CUP3aVSwtBeTKcLwK-A5r4zIV9Z/view?usp=sharing" class="link-card" target="_blank">
+        <span>Download Polosys 9.0</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://drive.google.com/file/d/1Uh18JEKtuuhgLzRH9McH-Rlxui5mx6De/view?usp=drive_link" class="link-card" target="_blank">
+        <span>Download SQL 2019 With SSMS</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://drive.google.com/file/d/1yjwacwJrjoF_qL_pEn0oSgGdyrBIp_LN/view?usp=drivesdk" class="link-card" target="_blank">
+        <span>Download SQL 2022 With SSMS</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://youtube.com/@cyberlayer?si=w9DjYyLJsciMt35c=" class="link-card" target="_blank">
+        <span>Visit Cyber Layer Youtube Channel</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://github.com/Munfilih/polosys/blob/main/AnyDesk-Reset.cmd" class="link-card" target="_blank">
+        <span>Anydesk Reset File</span>
+        <span class="arrow">→</span>
+      </a>
+
+    </div>
   </div>
+
+  
+
+  <footer>
+    Made By Munfi Polosys • © 2025
+  </footer>
+
 </body>
 </html>

@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quick Links to Polosys</title>
+  <title>Polosys Links</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #0f0f0f;
-      --card-color: #1a1a1a;
-      --accent-color: #00bcd4;
-      --text-color: #ffffff;
-      --hover-color: #333333;
-    }
-
-    * {
-      box-sizing: border-box;
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: white;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
+    #background {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
       padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
     h1 {
@@ -35,14 +38,13 @@
     }
 
     .links-section {
-      max-width: 800px;
-      margin: 0 auto 60px auto;
+      margin-bottom: 60px;
     }
 
     .section-title {
       font-size: 1.5rem;
       margin-bottom: 20px;
-      border-left: 4px solid var(--accent-color);
+      border-left: 4px solid #00bcd4;
       padding-left: 12px;
     }
 
@@ -53,11 +55,11 @@
     }
 
     .link-card {
-      background: var(--card-color);
+      background: rgba(0, 0, 0, 0.7);
       padding: 18px 24px;
       border-radius: 10px;
       text-decoration: none;
-      color: var(--text-color);
+      color: white;
       transition: background 0.3s ease;
       display: flex;
       justify-content: space-between;
@@ -65,23 +67,18 @@
     }
 
     .link-card:hover {
-      background: var(--hover-color);
+      background: rgba(0, 0, 0, 0.9);
     }
 
-    .link-card span {
-      font-size: 1rem;
-    }
-
-    .link-card .arrow {
+    .arrow {
+      color: #00bcd4;
       font-size: 1.2rem;
-      color: var(--accent-color);
     }
 
     footer {
       text-align: center;
-      color: #888;
       margin-top: 40px;
-      font-size: 0.9rem;
+      color: #aaa;
     }
 
     @media (max-width: 600px) {
@@ -99,65 +96,84 @@
 </head>
 <body>
 
-  <h1>Polosys Technologies</h1>
+  <div id="background"></div>
 
-  <div class="links-section">
-    <div class="section-title">Quick Links</div>
-    <div class="link-list">
-      <a href="https://www.polosys.com/PolosysPages/UpdateLinks.aspx" class="link-card" target="_blank">
-        <span>Polosys Update Links</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://drive.google.com/file/d/10pMe5CUP3aVSwtBeTKcLwK-A5r4zIV9Z/view?usp=sharing" class="link-card" target="_blank">
-        <span>Download Polosys 9.0</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://drive.google.com/file/d/1Uh18JEKtuuhgLzRH9McH-Rlxui5mx6De/view?usp=drive_link" class="link-card" target="_blank">
-        <span>Download SQL 2019 With SSMS</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://drive.google.com/file/d/1yjwacwJrjoF_qL_pEn0oSgGdyrBIp_LN/view?usp=drivesdk" class="link-card" target="_blank">
-        <span>Download SQL 2022 With SSMS</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://youtube.com/@cyberlayer?si=w9DjYyLJsciMt35c=" class="link-card" target="_blank">
-        <span>Visit Cyber Layer Youtube Channel</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://github.com/Munfilih/polosys/blob/main/AnyDesk-Reset.cmd" class="link-card" target="_blank">
-        <span>Anydesk Reset File</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://drive.google.com/file/d/1yQxozBDkN0Ak1JHfla5ABiMB9Eev_Fql/view?usp=sharing" class="link-card" target="_blank">
-        <span>Update 112</span>
-        <span class="arrow">→</span>
-      </a>
-<a href="https://drive.google.com/file/d/1AS2Q2PA3v5-UCCkz0M5cXiuz93Grnc1F/view?usp=sharing" class="link-card" target="_blank">
-        <span>TM-xA Management Program</span>
-        <span class="arrow">→</span>
-      </a>
+  <main>
+    <h1>Polosys Technologies</h1>
+
+    <div class="links-section">
+      <div class="section-title">Quick Links</div>
+      <div class="link-list">
+        <a href="https://www.polosys.com/PolosysPages/UpdateLinks.aspx" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Polosys Update Links</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://drive.google.com/file/d/10pMe5CUP3aVSwtBeTKcLwK-A5r4zIV9Z/view?usp=sharing" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Download Polosys 9.0</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1Uh18JEKtuuhgLzRH9McH-Rlxui5mx6De/view?usp=drive_link" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Download SQL 2019 With SSMS</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1yjwacwJrjoF_qL_pEn0oSgGdyrBIp_LN/view?usp=drivesdk" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Download SQL 2022 With SSMS</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://youtube.com/@cyberlayer?si=w9DjYyLJsciMt35c=" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Visit Cyber Layer Youtube Channel</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://github.com/Munfilih/polosys/blob/main/AnyDesk-Reset.cmd" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Anydesk Reset File</span>
+          <span class="arrow">→</span>
+        </a>
+        
+        <a href="https://drive.google.com/file/d/1AS2Q2PA3v5-UCCkz0M5cXiuz93Grnc1F/view?usp=sharing" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>TM-xA Management Program</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
-  </div>
 
-  
-<div class="links-section">
-    <div class="section-title">Useful Codes</div>
-    <div class="link-list">
-      <a href="https://munfilih.github.io/polosys/cleartransact.html" class="link-card" target="_blank">
-        <span>All Clear Query </span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://munfilih.github.io/polosys/important.html" class="link-card" target="_blank">
-        <span>Activation wizard texts</span>
-        <span class="arrow">→</span>
-      </a>
-      
+    <div class="links-section">
+      <div class="section-title">Useful Codes</div>
+      <div class="link-list">
+        <a href="https://munfilih.github.io/polosys/cleartransact.html" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>All Clear Query</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://munfilih.github.io/polosys/important.html" class="link-card" target="_blank" rel="noopener noreferrer">
+          <span>Activation Wizard Texts</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
-  </div>
 
-  <footer>
-    Made By Munfi Polosys • © 2025
-  </footer>
+    <footer>
+      Made By Munfi Polosys • © 2025
+    </footer>
+  </main>
 
+  <!-- Vanta.js + Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#background",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00bcd4,
+      backgroundColor: 0x0f0f0f,
+      points: 10.0,
+      maxDistance: 20.0,
+      spacing: 18.0
+    })
+  </script>
 </body>
 </html>
